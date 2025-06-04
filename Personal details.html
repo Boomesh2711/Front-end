@@ -1,0 +1,68 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Personal details</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Personal Details</h1>
+    <p>Name: </p>
+    <input type="text" id="name" placeholder="Enter your name">
+<p>Age: </p>
+    <input type="number" id="age" placeholder="Enter your age">
+    <p>Email: </p>
+    <input type="email" id="email" placeholder="Enter your email">
+    <p>Phone: </p>
+    <input type="tel" id="phone" placeholder="Enter your phone number">
+    <P>Gender: </P>
+    <select id="gender">
+        <option>Select your gender</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+    </select>
+    <p>Country: </p> 
+    <input type="radio" name="country" value="India"> INDIA
+    <input type="radio" name="country" value="other"> other
+    <br><br>
+    <button onclick="submitDetails()">Submit</button>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #6b3e26;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #b91010;
+            border-radius: 4px;
+        }
+        
+        button {
+            background-color: #6b3e26;
+            color: rgb(12, 11, 11);
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #8b5a2b;
+        }
+        input[type="radio"][name="country"] {
+    accent-color: #6b3e26; /* Modern browsers */
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+    </style>
+    </body>
