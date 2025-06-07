@@ -24,8 +24,54 @@
     <p>Country: </p> 
     <input type="radio" name="country" value="India"> INDIA
     <input type="radio" name="country" value="other"> other
-    <br><br>
-    <button onclick="submitDetails()">Submit</button>
+    <p> Range</p>
+    <input type ="range" name="range" min="1" max="100" value="50" id="range">
+    <b> color a picker</b> 
+
+    <select id="color-select">
+  <option value="#ff0000" style="background-color: #ff0000; color: white;">Red</option>
+  <option value="#00ff00" style="background-color: #00ff00; color: black;">Green</option>
+  <option value="#0000ff" style="background-color: #0000ff; color: white;">Blue</option>
+  <option value="#ffff00" style="background-color: #ffff00; color: black;">Yellow</option>
+</select>
+
+<b> Date</b>
+    <input type="date" id="date">
+    <b> Month  </b>
+    <input type="month" id="month">
+    <b> Week</b>
+    <input type="week" id="week">
+    <b> Time</b>
+    <input type="time" id="time">
+    <b> Datetime</b>
+    <input type="datetime-local" id="datetime">
+    <b> URL</b>
+    <input type="url" id="url" placeholder="Enter a URL">   
+    <b> Search</b>
+    <input type="search" id="search" placeholder="Search...">
+    <b><datalist>
+    <input type="text" id="datalist-input" list="datalist-options" placeholder="Choose an option">
+    <datalist id="datalist-options">
+        <option value="Option 1"></option>
+        <option value="Option 2"></option>
+        <option value="Option 3"></option>
+        <option value="Option 4"></option>
+        <option value="Option 5"></option>
+    </datalist></b> 
+    <b> Choose file </b>
+    <input type="file" id="file-input" accept=".txt, .pdf, .docx, .jpg, .png">
+    <input type="button" value="button" onclick="alert('Button clicked!')">
+    <input type="image" src="D:\Walpaper PC\1350086.jpeg" alt="Placeholder Image" onclick="alert('Image clicked!')">
+    <input type="button" value="Submit" onclick="document.getElementById('name').value=''; document.getElementById('age').value=''; document.getElementById('email').value=''; document.getElementById('phone').value='';">
+    <input type="button" value="Clear" onclick="document.getElementById('name').value=''; document.getElementById('age').value=''; document.getElementById('email').value=''; document.getElementById('phone').value='';">
+
+    
+
+
+
+
+    
+
 
     <style>
         body {
