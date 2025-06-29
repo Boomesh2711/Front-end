@@ -9,25 +9,103 @@ Display properties
          <a href="contact.html">Contact  </a> 
          <a href="help.html">Help  </a> 
         </nav>
+<section class="Block-section">
+        <div class="block">This is a block element.</div>
+        <div class="block">This is a block element.</div>
+        <div class="block">This is a block element.</div>
+</section>
+
+<section class="inline-section">
+        <span class="inline">This is an inline element.</span>
+        <span class="inline">This is an inline element.</span>
+        <span class="inline">This is an inline element.</span>
+</section>
+<section class="inline-block-section">
+         <div class="inline-block">This is an inline-block element.</div>
+         <div class="inline-block">This is an inline-block element.</div> 
+        <div class="inline-block">This is an inline-block element.</div>
+</section>
+
+<footer class="footer">
+    <p>&copy; 2023 Display Properties Example</p>
+</footer>
+
+
+</body>
 </html>
 
     <style>
-        .block {
+
+.block-section {
+        text-align: center;
+        margin: 30px 0;
+    }
+.block{
             display: block;
-            background-color: lightblue;
-            padding: 10px;
-            margin: 5px;
+            background-color: rgb(44, 145, 179);
+            padding: 5px;
+            margin: 10px auto;
+            width: 80%;
         }
-        .inline {
-            display: inline;
-            background-color: lightgreen;
-            padding: 10px;
-            margin: 5px;
+
+.inline-section {
+    text-align: center;
+    margin: 30px 0;
+}
+.inline {
+    display: inline;
+    background-color: #2196F3;
+    color: white;
+    padding: 10px 20px;
+    margin: 15px;
+    
+    border-radius: 5px;
+
+}
+
+.inline-block-section{
+    text-align: center;
+    margin: 30px 0;
+}
+
+.inline-block{
+    display: inline-block;
+    background-color: rgb(221, 37, 108);
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+
+}
+
+        /* Center the inline elements */
+        .body {
+            text-align: center;
         }
-        .inline-block {
-            display: inline-block;
-            background-color: lightcoral;
+
+    nav {
+        display: flexbox;
+            background-color: rgb(213, 108, 134);
             padding: 10px;
-            margin: 5px;
+            text-align: center;
         }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            margin: 0 10px;
+            border-radius: 5px;
+        }
+        nav a:hover {
+            background-color: rgb(255, 255, 255);
+            color: black;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 90px;
+            padding: px;
+            background-color: rgb(213, 108, 134);
+            color: white;
+        }
+        
     </style>
