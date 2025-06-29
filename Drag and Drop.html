@@ -1,0 +1,113 @@
+Drag and Drop
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Drag and Drop Box</title>
+  <style>
+    .container {
+      width: 600px;
+      height: 300px;
+      border: 2px dashed #888;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+
+    .dropzone {
+      width: 200px;
+      height: 200px;
+      border: 2px solid #ccc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+    }
+
+    .draggable {
+      width: 100px;
+      height: 100px;
+      background-color: #4CAF50;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: move;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <div id="drag1" class="draggable" draggable="true" ondragstart="drag(event)">Drag me</div>
+    </div>
+    <div class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+  </div>
+
+  <script>
+    function allowDrop(ev) {
+      ev.preventDefault();
+    }
+
+    function drag(ev) {
+      ev.dataTransfer.setData("text", ev.target.id);
+    }
+
+    function drop(ev) {
+      ev.preventDefault();
+      var data = ev.dataTransfer.getData("text");
+      var draggedElement = document.getElementById(data);
+      if (ev.target.classList.contains('dropzone')) {
+        ev.target.appendChild(draggedElement);
+      } else if (ev.target.parentElement.classList.contains('dropzone')) {
+        ev.target.parentElement.appendChild(draggedElement);
+      }
+    }
+  </script>
+
+
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Only Drag Box</title>
+  <style>
+    .box {
+      width: 600px;
+      height: 400px;
+      border: 2px dashed #666;
+      margin: 50px auto;
+      padding: 10px;
+      overflow: auto;
+      background: #f0f0f0;
+      position: relative;
+    }
+
+    .box[contenteditable="true"] {
+      outline: none;
+    }
+
+    .draggable {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      cursor: move;
+      margin: 5px;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box" contenteditable="true">
+    <div class="draggable">Drag me</div>
+    <div class="draggable">And me</div>
+  </div>
+
+</body>
+
+
+</html>
