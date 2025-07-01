@@ -1,0 +1,77 @@
+    <!-- Flex box Layout Examples -->
+
+<html>
+    <body>
+        <h1>Flexbox Layout Example</h1>
+        <nav>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="help.html">Help</a>
+    </nav>
+        <section class="flex-section">
+            <div class="flex-item">Content Box 1</div>
+            <div class="flex-item">Content Box 2</div>
+            <div class="flex-item">Content Box 3</div>
+            <div class="flex-item">Content Box 4</div>
+            <div class="flex-item">Content Box 5</div>
+            <div class="flex-item">Content Box 6</div>
+    </body>
+     </section>
+        <footer class="footer">
+            <p>&copy; 2023 Flexbox Layout Example</p>
+        </footer>
+    <style>
+
+        h1{
+            text-align: center;
+            color: rgb(44, 145, 179);
+        }
+        nav{
+            
+            text-align: center;
+            background-color: rgb(59, 61, 61);
+            margin: 30px 0;
+            padding: 5px;
+        }
+        .flex-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; 
+            align-items: center;
+            gap: 10px;
+            margin: 30px 0;
+        }
+        .flex-item {
+            
+         background-color: salmon;
+         border-radius: 5px;
+         text-align: center;
+         flex: 0 0 32%;
+         gap: 10px;
+         width: 70px;
+         margin: 10 10px;
+         padding:  10px;
+
+        }
+        nav a{
+            margin: 0 15px;
+            text-decoration: salmon;
+            color: rgb(44, 145, 179);
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .footer{
+            text-align: center;
+            background-color: rgb(59, 61, 61);
+            color: white;
+            padding: 5px;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+        }
+
+    </style>
+       
+</html>
