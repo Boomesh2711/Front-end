@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grid Layout Examples</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-gap: 10px;
+            height: 300px;
+        }
+        .grid-head {
+            text-align: center;
+            background-color: rgb(35, 111, 158);
+            color: white;
+            padding: 10px;
+        }
+        .grid-sidebar {
+            background-color: rgb(32, 212, 170);
+            padding: 10px;
+        }
+        .grid-item {
+            background-color: rgb(11, 64, 109);
+            color: white;
+            padding: 10px;
+        }
+        .grid-footer {
+            text-align: center;
+            background-color: rgb(35, 111, 158);
+            color: white;
+            padding: 10px;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="grid-head">Grid Layout Examples</h1>
+    <div class="grid-container">
+        <aside class="grid-sidebar">
+            Sidebar content goes here.
+        </aside>
+        <div class="grid-item">
+            Main content area
+        </div>
+    </div>
+    <footer class="grid-footer">
+        <p>&copy; 2023 Grid Layout Example</p>
+    </footer>
+</body>
+</html>
