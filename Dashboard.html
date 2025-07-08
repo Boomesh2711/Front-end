@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  
+</head>
+<body>
+
+  <header>
+    <div class="box">
+         <h1 class="dash">Dashboard</h1>
+        <nav class="navbar">
+            <a href="home.html">Home</a>
+            <a href="Service.html">Menu</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav >
+    </div>
+   
+    <div class="top-right">
+      <input type="text" class="search" placeholder="Search...">
+      <div class="notify">N</div>
+      <div class="profile">DP</div>
+    </div>
+  </header>
+ 
+  <div class="pickup-options">
+    <div class="label-title">Pickup 1 <br>24 orders - 9:05 AM</div>
+    <select class="dropdown">
+      <option value="option1">Pickups</option>
+      <option value="option2">Drop</option>
+      <option value="option3">Others</option>
+    </select>
+  </div>
+
+  <div class="order-card">
+    <h2>#20215</h2>
+    <p>Harish</p>
+    <span>2023-10-15</span><br>
+    <span>900rs</span>
+    <div class="Status">Completed</div>
+  </div>
+
+
+    <table class="table-data">
+            <thead>
+                <tr>
+                    <th>OrderID</th>
+                    <th>Customer</th>
+                    <th>Date</th>
+                    <th>Price</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+    </table>
+    <h1 class="orderlist">Order List</h1>
+     <table class="table-data1">
+            <thead>
+                <tr>
+                    <th>SNO</th>
+                    
+                    <th>Product name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total price</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Coffee</td>
+                    <td>2</td>
+                    <td>100rs</td>
+                    <td>200rs</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Coffee</td>
+                    <td>2</td>
+                    <td>100rs</td>
+                    <td>200rs</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Coffee</td>
+                    <td>2</td>
+                    <td>100rs</td>
+                    <td>200rs</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Coffee</td>
+                    <td>2</td>
+                    <td>100rs</td>
+                    <td>200rs</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Coffee</td>
+                    <td>2</td>
+                    <td>100rs</td>
+                    <td>200rs</td>
+                </tr>
+                
+            </thead>
+    </table>
+
+ 
+
+    </div>
+        <div class="buttons">
+       <button class="cancel"> Cancel order</button>
+       <button class="accept">Accept for Pickup</button>
+    </div>
+</body>
+</html>
+<style>
+    .box {
+      position: relative;
+    }
+
+    .navbar {
+      display: flex;
+      flex-direction: column;
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.3s ease;
+      position: absolute;
+      background-color: white;
+      top: 100%;
+   
+     
+    }
+
+    .box:hover .navbar {
+      opacity: 1;
+      visibility: visible;
+    }
+    a{
+        padding-bottom: 10px;
+    }
+    .buttons{
+        display: flex;
+        justify-content: right;
+        margin: 30px;
+        gap: 20px;
+    }
+    button{
+       background-color: green;
+       padding: 5px;
+       border-radius: 5px;
+       color: white;
+    }
+    
+   button:hover.cancel {
+        background-color: rgb(62, 168, 203);
+    }
+   button:hover.accept{
+        background-color: rgb(66, 226, 143);
+    }
+    
+
+    .table-data {
+        width: 100%;
+        margin: 20px 0;
+       border-bottom : rgb(184, 180, 180) 1px solid;
+        width: 100%;
+    }
+    .table-data1 {
+        width: 95%;
+        border: 2px solid #989898;
+        border-collapse: collapse;
+        margin: auto;
+    }
+
+    .table-data1 th,
+    .table-data1 td {
+        border: 2px solid #989898;
+        padding: 8px;
+    }
+
+  .table-data1 th:nth-child(1) {
+  width: 50px; 
+}
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #f0f0f0;
+    }
+
+    .top-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .search {
+      padding: 5px 10px;
+    }
+
+    .notify,
+    .profile {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      color: white;
+      font-weight: bold;
+    }
+
+    .notify {
+      background-color: rgb(112, 19, 158);
+    }
+
+    .profile {
+      background-color: rgb(81, 181, 179);
+    }
+
+    .pickup-options,.order-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #e7e7e7;
+    }
+.order-card{
+    background-color: rgb(175, 237, 175);
+}
+    .dropdown {
+      padding: 5px;
+    }
+
+ 
+
+    .Status {
+      background-color: green;
+      display: inline-block;
+      color: white;
+      padding: 10px;
+      border-radius: 7px;
+    }
+  </style>
