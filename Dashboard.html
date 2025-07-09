@@ -3,119 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <title>Dashboard</title>
-  
-</head>
-<body>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  <header>
-    <div class="box">
-         <h1 class="dash">Dashboard</h1>
-        <nav class="navbar">
-            <a href="home.html">Home</a>
-            <a href="Service.html">Menu</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </nav >
-    </div>
-   
-    <div class="top-right">
-      <input type="text" class="search" placeholder="Search...">
-      <div class="notify">N</div>
-      <div class="profile">DP</div>
-    </div>
-  </header>
- 
-  <div class="pickup-options">
-    <div class="label-title">Pickup 1 <br>24 orders - 9:05 AM</div>
-    <select class="dropdown">
-      <option value="option1">Pickups</option>
-      <option value="option2">Drop</option>
-      <option value="option3">Others</option>
-    </select>
-  </div>
+    body {
+      font-family: Arial, sans-serif;
+    }
 
-  <div class="order-card">
-    <h2>#20215</h2>
-    <p>Harish</p>
-    <span>2023-10-15</span><br>
-    <span>900rs</span>
-    <div class="Status">Completed</div>
-  </div>
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #f0f0f0;
+    }
 
-
-    <table class="table-data">
-            <thead>
-                <tr>
-                    <th>OrderID</th>
-                    <th>Customer</th>
-                    <th>Date</th>
-                    <th>Price</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-    </table>
-    <h1 class="orderlist">Order List</h1>
-     <table class="table-data1">
-            <thead>
-                <tr>
-                    <th>SNO</th>
-                    
-                    <th>Product name</th>
-                    <th>Quantity</th>
-                    <th>Price</th>
-                    <th>Total price</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Coffee</td>
-                    <td>2</td>
-                    <td>100rs</td>
-                    <td>200rs</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Coffee</td>
-                    <td>2</td>
-                    <td>100rs</td>
-                    <td>200rs</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Coffee</td>
-                    <td>2</td>
-                    <td>100rs</td>
-                    <td>200rs</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Coffee</td>
-                    <td>2</td>
-                    <td>100rs</td>
-                    <td>200rs</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Coffee</td>
-                    <td>2</td>
-                    <td>100rs</td>
-                    <td>200rs</td>
-                </tr>
-                
-            </thead>
-    </table>
-
- 
-
-    </div>
-        <div class="buttons">
-       <button class="cancel"> Cancel order</button>
-       <button class="accept">Accept for Pickup</button>
-    </div>
-</body>
-</html>
-<style>
     .box {
       position: relative;
+    }
+
+    .dash {
+      margin-bottom: 5px;
     }
 
     .navbar {
@@ -127,72 +40,18 @@
       position: absolute;
       background-color: white;
       top: 100%;
-   
-     
     }
 
     .box:hover .navbar {
       opacity: 1;
       visibility: visible;
     }
-    a{
-        padding-bottom: 10px;
-    }
-    .buttons{
-        display: flex;
-        justify-content: right;
-        margin: 30px;
-        gap: 20px;
-    }
-    button{
-       background-color: green;
-       padding: 5px;
-       border-radius: 5px;
-       color: white;
-    }
-    
-   button:hover.cancel {
-        background-color: rgb(62, 168, 203);
-    }
-   button:hover.accept{
-        background-color: rgb(66, 226, 143);
-    }
-    
 
-    .table-data {
-        width: 100%;
-        margin: 20px 0;
-       border-bottom : rgb(184, 180, 180) 1px solid;
-        width: 100%;
-    }
-    .table-data1 {
-        width: 95%;
-        border: 2px solid #989898;
-        border-collapse: collapse;
-        margin: auto;
-    }
-
-    .table-data1 th,
-    .table-data1 td {
-        border: 2px solid #989898;
-        padding: 8px;
-    }
-
-  .table-data1 th:nth-child(1) {
-  width: 50px; 
-}
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-      background-color: #f0f0f0;
+    .navbar a {
+      padding: 10px 15px;
+      text-decoration: none;
+      color: black;
+      border-bottom: 1px solid #ccc;
     }
 
     .top-right {
@@ -225,21 +84,66 @@
       background-color: rgb(81, 181, 179);
     }
 
-    .pickup-options,.order-card {
+    .hamburger-menu {
+      position: relative;
+    }
+
+    .hamburger-icon {
+      font-size: 30px;
+      cursor: pointer;
+      padding: 15px;
+      background: #333;
+      color: white;
+      width: fit-content;
+    }
+
+    .sidebar {
+      position: absolute;
+      top: 0;
+      left: -200px;
+      width: 200px;
+      height: 100vh;
+      background-color: #444;
+      color: white;
+      padding-top: 60px;
+      transition: left 0.3s ease;
+      z-index: 100;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      padding: 15px 20px;
+    }
+
+    .sidebar ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .hamburger-menu:hover .sidebar {
+      left: 0;
+    }
+
+    .pickup-options,
+    .order-card {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 20px;
       background-color: #e7e7e7;
     }
-.order-card{
-    background-color: rgb(175, 237, 175);
-}
+
+    .order-card {
+      background-color: rgb(175, 237, 175);
+      margin-top: 10px;
+    }
+
     .dropdown {
       padding: 5px;
     }
-
- 
 
     .Status {
       background-color: green;
@@ -248,4 +152,161 @@
       padding: 10px;
       border-radius: 7px;
     }
+
+    .table-data {
+      width: 100%;
+      margin: 20px 0;
+      border-bottom: rgb(184, 180, 180) 1px solid;
+    }
+
+    .table-data1 {
+      width: 95%;
+      border: 2px solid #989898;
+      border-collapse: collapse;
+      margin: 20px auto;
+    }
+
+    .table-data1 th,
+    .table-data1 td {
+      border: 2px solid #989898;
+      padding: 8px;
+      text-align: center;
+    }
+
+    .table-data1 th:nth-child(1) {
+      width: 50px;
+    }
+
+    .orderlist {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: right;
+      margin: 30px;
+      gap: 20px;
+    }
+
+    button {
+      background-color: green;
+      padding: 10px 15px;
+      border-radius: 5px;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button.cancel:hover {
+      background-color: rgb(62, 168, 203);
+    }
+
+    button.accept:hover {
+      background-color: rgb(66, 226, 143);
+    }
   </style>
+</head>
+<body>
+
+  <header>
+    <div class="box">
+      <h1 class="dash">Dashboard</h1>
+      <nav class="navbar">
+        <a href="home.html">Home</a>
+        <a href="Service.html">Menu</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+    <div class="top-right">
+      <input type="text" class="search" placeholder="Search...">
+      <div class="notify">N</div>
+      <div class="profile">DP</div>
+    </div>
+  </header>
+
+  <div class="hamburger-menu">
+    <div class="hamburger-icon">☰</div>
+    <div class="sidebar">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="pickup-options">
+    <div class="label-title">Pickup 1 <br>24 orders - 9:05 AM</div>
+    <select class="dropdown">
+      <option value="option1">Pickups</option>
+      <option value="option2">Drop</option>
+      <option value="option3">Others</option>
+    </select>
+  </div>
+
+  <div class="order-card">
+    <h2>#20215</h2>
+    <p>Harish</p>
+    <span>2023-10-15</span><br>
+    <span>900rs</span>
+    <div class="Status">Completed</div>
+  </div>
+
+  <table class="table-data">
+    <thead>
+      <tr>
+        <th>OrderID</th>
+        <th>Customer</th>
+        <th>Date</th>
+        <th>Price</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+  </table>
+
+  <h1 class="orderlist">Order List</h1>
+  <table class="table-data1">
+    <thead>
+      <tr>
+        <th>SNO</th>
+        <th>Product name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Total price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Coffee</td>
+        <td>2</td>
+        <td>100rs</td>
+        <td>200rs</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Tea</td>
+        <td>3</td>
+        <td>50rs</td>
+        <td>150rs</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Juice</td>
+        <td>1</td>
+        <td>120rs</td>
+        <td>120rs</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="buttons">
+    <button class="cancel">Cancel order</button>
+    <button class="accept">Accept for Pickup</button>
+  </div>
+
+</body>
+</html>
