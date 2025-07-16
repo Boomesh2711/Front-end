@@ -1,0 +1,22 @@
+
+.container{
+    display: flex;
+    height: 100vh;
+}
+.sidebar{
+    width: 200px;
+    background-color: rgb(255, 245, 245);
+    padding: 30px;
+}
+.main-content{
+    flex: 1;
+    background-color: lightblue;
+    padding: 30px;
+    overflow-y: auto;
+}
+.app-name{
+    font-size: 30px;
+    font-weight: bold;
+    background: linear-gradient(to right, #0abbc8, #09ddbe);
+    
+}
