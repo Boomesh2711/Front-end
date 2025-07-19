@@ -2,21 +2,240 @@
 .container{
     display: flex;
     height: 100vh;
+   
 }
 .sidebar{
     width: 200px;
     background-color: rgb(255, 245, 245);
     padding: 30px;
-}
+    display: flex;
+     
+}  
 .main-content{
     flex: 1;
     background-color: lightblue;
     padding: 30px;
     overflow-y: auto;
 }
-.app-name{
-    font-size: 30px;
+h1{
+    font-size: 24px;
     font-weight: bold;
-    background: linear-gradient(to right, #0abbc8, #09ddbe);
-    
 }
+.app-name-word1{
+    
+   color: cyan;
+}
+.app-name-word2{
+    
+   color: rgb(8, 8, 8);
+}
+
+.app-name-word3{
+    
+   color: rgb(28, 222, 44);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(8, 8, 8);
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+nav {
+  background-color: rgb(242, 246, 247);
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 200px;
+}
+
+.nav-item {
+  display: inline;
+  align-items: center; /* Ensures icon and text align vertically */
+  color: rgb(8, 8, 8);
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.nav-item:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(10, 169, 232);
+  display: inline;
+}
+
+img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.top-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.search-notify-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-radius: 15px;
+}
+.profile-group{
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.search {
+ padding: 10px;
+ display: inline-block;
+  
+}
+
+.notification-icon,
+.profile-icon,.arrow-icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+.pickup-options,.order-data1,
+    .order-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      border-radius: 20px;
+     
+    }
+    .order-data1{
+        background-color: white;
+        margin-top: 10px;
+        padding: 15px;
+    }
+
+    .order-card {
+      background-color: rgb(175, 237, 175);
+      margin-top: 10px;
+    }
+
+    .dropdown {
+      border: #dfd4d4;
+      padding: 10px;
+        border-radius: 10px;
+    }
+ .Status {
+      background-color: green;
+      display: inline-block;
+      color: white;
+      padding: 10px;
+      border-radius: 7px;
+
+    }
+    
+    .table-data {
+      width: 100%;
+      padding: 10px;
+      ;
+      
+    }
+    .table-data td{
+        border-top: #bcb9b9 2px solid;
+        text-align: center;
+        padding-top: 20px;
+      
+    }
+    .table-data th{
+        padding: 10px;
+    }
+
+    .table-data1 {
+      width: 95%;
+      border: 2px solid #989898;
+      border-collapse: collapse;
+      margin: 20px auto;
+      
+    }
+
+    .table-data1 th {
+      border: 2px solid #c2bebe;
+      padding: 8px;
+      text-align: start;
+    }
+    .table-data1 td {
+      border: 2px solid #bcb9b9;
+      padding: 8px;
+      text-align: start;
+     
+     
+    }
+
+    .table-data1 th:nth-child(1) {
+      width: 50px;
+    }
+
+    .orderlist {
+      text-align: start;
+      margin: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: right;
+      margin: 30px;
+      gap: 20px;
+    }
+
+    button {
+      background-color: rgb(255, 253, 253);
+      padding: 10px 15px;
+      border-radius: 5px;
+      color:black;
+      border: none;
+      cursor: pointer;
+      border: 1px solid rgb(8, 8, 8);
+      border-color: rgb(0, 172, 252);
+    }
+
+    button.cancel:hover {
+      background-color: rgb(62, 168, 203);
+    }
+
+    button.accept:hover {
+      background-color: rgb(7, 181, 255);
+    }
+    .back{
+        background-color: white;
+        display: block;
+        padding-bottom: 30px;
+border-radius: 10px;
+margin-top: 20px;
+    }
+    .Pending{
+        background-color: rgb(124, 198, 216);
+        border-radius: 10px;
+        display: inline-block;
+        padding: 5px;
+        color: rgb(41, 83, 90);
+    }
+    .search-icon{
+        background-color: white;
+        
+    }
+    .box{
+        display: flex;
+        background-color: white;
+        border-radius: 5px;
+        align-items: center;
+        justify-content: center;
+        padding-left: 5px;
+    }
+    

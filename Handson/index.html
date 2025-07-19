@@ -8,20 +8,148 @@
 <body>
   <div class="container">
    <aside class="sidebar">
-    <h1>
-      <span class="app-name"> Pick your Cloth</span>
+  
+    
+    <nav class="navbar">
+          <h1>
+      <span class="app-name-word1"> Pick</span>
+      <span class="app-name-word2"> your</span>
+      <span class="app-name-word3"> Cloth</span>
     </h1>
-
-    <ul>
-      <li><a href="Dashboard.html">Dashboard</a></li>
-      <li><a href="orders.html">Orders</a></li>
-      <li><a href="statistics.html">Statistics</a></li>
-      <li><a href="products.html">Products</a></li>
-      <li><a href="stock.html">Stock</a></li>
-      <li><a href="offers.html">Offers</a></li>
+  <a href="Dashboard.html" class="nav-item">
+    <img src="Asserts/icons/dashboard.png" alt="dashboard icon">
+    <span>Dashboard</span> </a>
+  <a href="orders.html" class="nav-item">
+    <img src="Asserts/icons/orders.png" alt="orders icon">
+    <span>Orders</span> </a>
+  <a href="statistics.html" class="nav-item">
+    <img src="Asserts/icons/statistics.png" alt="statistics icon">
+    <span>Statistics</span> </a>
+  <a href="products.html" class="nav-item">
+    <img src="Asserts/icons/products.png" alt="products icon">
+    <span>Products</span> </a>
+  <a href="stock.html" class="nav-item">
+    <img src="Asserts/icons/stock.png" alt="stock icon">
+    <span>Stock</span> </a>
+  <a href="offers.html" class="nav-item">
+    <img src="Asserts/icons/offers.png" alt="offers icon">
+    <span>Offers</span> </a>
+</nav>
    </aside>
    <main class="main-content">
-   <h1> Order</h1>
+   
+   <div class="top-bar">
+    <h1 class="order"> Order</h1>
+  
+    <div class="search-notify-profile">
+      <div class="search-icon">
+        <span class="search">
+          <div><img src="Asserts/icons/search.png" alt=""></div></span> 
+     <input   placeholder="Search in Knowck N' Door" class="search">
+    </div>
+     <div class="box"> <img src="Asserts/icons/bell-ring.png" alt="bell icon" class="notification-icon"></div>
+     
+
+
+  <div class="profile-group"> <div class="box">
+<img src="Asserts/icons/profile.png" alt="profile" class="profile-icon"></div>
+<div class="box">
+<img src="Asserts/icons/down-arrow.png" alt="dropdown arrow" class="arrow-icon"></div>
+</div>
+</div>
+</div>
+
+ <div class="pickup-options">
+    <div class="label-title">Pickup 1 <br>24 orders - 9:05 AM</div>
+    <select class="dropdown">
+      <option value="option1">Pickups</option>
+      <option value="option2">Drop</option>
+      <option value="option3">Others</option>
+    </select>
+  </div>
+<div class="order-card">
+    <h2>#20215</h2>
+    <p>Harish</p>
+    <span>2023-10-15</span><br>
+    <span>900rs</span>
+    <div class="Status">Completed</div>
+    <div class="box">
+    <img src="Asserts/icons/setting.png" alt="setting" class="setting"> </div>
+    <div class="box"><img src="Asserts/icons/down-arrow.png" alt="dropdown arrow" class="arrow-icon"></div>
+  </div>
+  <div class="back">
+  <table class="table-data">
+    <thead>
+      <tr>
+        <th>OrderID</th>
+        <th>Customer</th>
+        <th>Date</th>
+        <th>Price</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>#240</td>
+        <td>rice</td>
+        <td>31 July 2023</td>
+        <td>$100.00</td>
+        <td><div class="Pending">Pending</div></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h1 class="orderlist">Order List</h1>
+  <table class="table-data1">
+    <thead>
+      <tr>
+        <th>SNO</th>
+        <th>Product name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Total price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Coffee</td>
+        <td>2</td>
+        <td>100rs</td>
+        <td>200rs</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Tea</td>
+        <td>3</td>
+        <td>50rs</td>
+        <td>150rs</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Juice</td>
+        <td>1</td>
+        <td>120rs</td>
+        <td>120rs</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="buttons">
+    <button class="cancel">Cancel order</button>
+    <button class="accept">Accept for Pickup</button>
+  </div>
+</div>
+<div class="order-data1">
+    <h2>#20215</h2>
+    <p>Harish</p>
+    <span>2023-10-15</span><br>
+    <span>900rs</span>
+    <div class="Status">Completed</div>
+    <div class="box"><img src="Asserts/icons/setting.png" alt="setting" class="setting"></div>
+    <div class="box"></div><img src="Asserts/icons/down-arrow.png" alt="dropdown arrow" class="arrow-icon"></div>
+  </div>
+
    </main>
   </div>
 </body>
