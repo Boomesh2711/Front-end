@@ -1,3 +1,11 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: normal;
+
+}
+* {
+  font-weight: normal !important;
+}
 
 .container{
     display: flex;
@@ -16,10 +24,10 @@
     background-color: lightblue;
     padding: 30px;
     overflow-y: auto;
+    border-radius: 20px;
 }
 h1{
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 20px;  
 }
 .app-name-word1{
     
@@ -58,7 +66,6 @@ nav {
   padding: 10px;
   border-radius: 5px;
   font-size: 18px;
-  font-weight: bold;
   text-decoration: none;
   transition: background-color 0.2s;
 }
@@ -83,22 +90,30 @@ img {
     align-items: center;
     margin-bottom: 20px;
 }
+ .search-icon{
+        background-color: rgb(255, 255, 255);
+        border-radius: 20px;
+        height: auto;
+        
+    }
 .search-notify-profile {
     display: flex;
     align-items: center;
     gap: 15px;
-    border-radius: 15px;
+  
+  
 }
 .profile-group{
     display: flex;
     align-items: center;
-    gap: 0;
+  
 }
 
 .search {
  padding: 10px;
- display: inline-block;
-  
+ display: inline-block; 
+ border: none;
+
 }
 
 .notification-icon,
@@ -106,6 +121,12 @@ img {
   width: 24px;
   height: 24px;
   cursor: pointer;
+  
+}
+.notification-icon{
+
+  height : 30px;
+
 }
 .pickup-options,.order-data1,
     .order-card {
@@ -220,20 +241,17 @@ border-radius: 10px;
 margin-top: 20px;
     }
     .Pending{
-        background-color: rgb(124, 198, 216);
-        border-radius: 10px;
+        background-color: rgb(191, 231, 241);
+        border-radius: 30px;
         display: inline-block;
         padding: 5px;
-        color: rgb(41, 83, 90);
+        color: rgb(8, 161, 188);
     }
-    .search-icon{
-        background-color: white;
-        
-    }
+   
     .box{
         display: flex;
         background-color: white;
-        border-radius: 5px;
+        border-radius: 50px;
         align-items: center;
         justify-content: center;
         padding-left: 5px;
