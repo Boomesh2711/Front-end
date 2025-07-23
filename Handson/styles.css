@@ -76,13 +76,19 @@ nav {
   display: inline;
 }
 
+.nav-item:hover.dashboard-icon {
+  background-color: white;
+}
+
 img {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   margin-right: 10px;
   display: inline-block;
   vertical-align: middle;
   cursor: pointer;
+  background-color: white;
+  border-radius: 5px;
 }
 .top-bar{
     display: flex;
@@ -257,3 +263,39 @@ margin-top: 20px;
         padding-left: 5px;
     }
     
+
+
+    /* Common style for icon wrappers */
+.bell{
+  background-color: white;
+  border-radius: 50%;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;   /* Adjust based on desired icon size */
+  height: 30px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+/* Optional: resize icon inside */
+
+.profile-icon {
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.notification-icon{
+  padding: 5px;
+  margin: 0  0 15 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* Do NOT apply any styles to arrow */
+img[alt="dropdown arrow"] {
+  width: auto;
+  height: auto;
+}
