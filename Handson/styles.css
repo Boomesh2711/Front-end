@@ -28,6 +28,7 @@ body {
 }
 h1{
     font-size: 20px;  
+    padding-left: 20px;
 }
 .app-name-word1{
     
@@ -171,7 +172,7 @@ img {
     .table-data {
       width: 100%;
       padding: 10px;
-      ;
+      align-items: center;
       
     }
     .table-data td{
