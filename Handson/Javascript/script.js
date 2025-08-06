@@ -3,6 +3,7 @@ var Intrest=document.getElementById("Intrest");
 var time=document.getElementById("time");
 var intrest=document.getElementById("intrest");
 var result=document.getElementById("result");
+var comments=document.getElementById("Additional");
 
 var addButton=document.getElementById("calculate");
 addButton.addEventListener("click",validate);
@@ -25,8 +26,7 @@ function validate() {
     var principleValue =parseFloat(principle.value);
     var intrestValue = parseFloat(Intrest.value);
     var timeValue = parseFloat(time.value);
-    // intrest.textContent= "Intrest: " + ((principleValue * intrestValue * timeValue) / 100);
-    //    result.textContent= "Total Amount: " + (principleValue+(principleValue * intrestValue * timeValue) / 100);
+
        var addon 
     try{ if(vali(principleValue)==false){
             throw new Error("Please enter a valid principal amount greater than 500");
@@ -37,6 +37,7 @@ function validate() {
         intrest.textContent= "Intrest: " + ((principleValue * (5+ addon)* timeValue) / 100);
         result.textContent= "Total Amount: " + (principleValue+(principleValue * (5+ addon)* timeValue) / 100);
          Intrest.value= 5 + addon;
+        
 
       }
       if(principleValue>=1000 && principleValue<=5000){
@@ -50,7 +51,7 @@ function validate() {
          Intrest.value= 10 + addon;
       }}
        catch(error){
-        alert("An error occurred: " + error.message);
+        comments.textContent = "Comments: Please enter a valid principal amount greater than 500";
        }
     };
    
