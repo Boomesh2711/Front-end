@@ -13,9 +13,8 @@ const deleteBtn = document.createElement('button');
 deleteBtn.innerText = 'Delete';
 const span = document.createElement('span');
 deleteBtn.className = 'delete';
-
-
 span.innerText = taskText;
+
 li.appendChild(checkbox);
 li.appendChild(span);
 li.appendChild(deleteBtn);

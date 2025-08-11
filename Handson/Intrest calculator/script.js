@@ -4,7 +4,6 @@ var time=document.getElementById("time");
 var intrest=document.getElementById("intrest");
 var result=document.getElementById("result");
 var comments=document.getElementById("Additional");
-
 var addButton=document.getElementById("calculate");
 addButton.addEventListener("click",validate);
 function vali(principleValue) {
@@ -54,8 +53,3 @@ function validate() {
         comments.textContent = "Comments: Please enter a valid principal amount greater than 500";
        }
     };
-   
-    
-
-
-    
