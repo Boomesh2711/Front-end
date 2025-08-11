@@ -23,6 +23,7 @@ li.appendChild(deleteBtn);
 
    checkbox.addEventListener('change', function() {
   li.classList.toggle('completed');
+
 });
 
 deleteBtn.addEventListener('click', function() {
