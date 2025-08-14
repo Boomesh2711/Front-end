@@ -1,33 +1,51 @@
-function addTask() {
-  const input = document.getElementById('taskInput');
-  const taskText = input.value.trim();
- 
-  if (taskText === '') return;
+let students = [];
 
-  const li = document.createElement('li');  
- 
-const checkbox = document.createElement('input');
-checkbox.type = 'checkbox';
+function addStudent() {
+  const Student = document.getElementById('studentName');
+  const Grade = document.getElementById('studentGrade');
 
-const deleteBtn = document.createElement('button');
-deleteBtn.innerText = 'Delete';
-const span = document.createElement('span');
-deleteBtn.className = 'delete';
-span.innerText = taskText;
+  const studentText = Student.value.trim();
+  const gradeText = Grade.value.trim();
 
-li.appendChild(checkbox);
-li.appendChild(span);
-li.appendChild(deleteBtn);
+if (studentText === '' || gradeText === '') return;
 
- document.getElementById('taskList').appendChild(li);
+ const li = document.createElement('li');   
+ const p = document.createElement('p');
+ p.innerText = studentText;
 
-   checkbox.addEventListener('change', function() {
-  li.classList.toggle('completed');
+const span = [document.createElement('span')];
 
-});
+   span.innerText = ` - ${gradeText}`;
 
-deleteBtn.addEventListener('click', function() {
-  li.remove();
-});
+ students.push({ name: studentText, grade: Number(gradeText) });
 
+    // Clear inputs
+    Student.value = '';
+    Grade.value = '';
 }
+
+function displayStudents() {
+    const list = document.getElementById('studentList');
+    list.innerHTML = ''; // Reset list
+
+    students.forEach(student => {
+        const li = document.createElement('li');
+        li.innerText = `${student.name} - ${student.grade}`;
+        list.appendChild(li);
+    });
+}
+function DisplayGrade() {
+    document.querySelector('.displaygradearea').style.display = 'block'; 
+    displayStudents();
+}
+function AverageGrade() {
+    if (students.length === 0) return;
+
+    const sum = students.reduce((total, student) => total + student.grade, 0);
+    const avg = (sum / students.length).toFixed(2);
+    const list = document.getElementById('AverageGradeList');
+    list.innerHTML = `<b>Average Grade:</b> <li>${avg}</li>`;
+}
+
+
+
