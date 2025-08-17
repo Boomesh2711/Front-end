@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debugging Practice</title>
+</head>
+<body>
+    <h1>JavaScript Debugging Demo</h1>
+
+    <button id="loadDataBtn">Load Data</button>
+    <p id="message"></p>
+    <ul id="dataList"></ul>
+
+    <script>
+        document.getElementById("loadDataBtn").addEventListener("click", loadData);
+
+        function loadData() {
+            debugger;
+            console.log("Button clicked! Starting data load...");
+
+            let url = "https://jsonplaceholder.typicode.com/posts?_limit=5";
+
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    displayData(data);
+                })
+                .catch(error => console.error("Error fetching data:", error));
+        }
+
+        function displayData(data) {
+            let list = document.getElementById("dataList");
+            list.innerHTML = "";
+
+            // Intentional bug for practice: using wrong variable name
+            data.forEach(item => {
+                let li = document.createElement("li");
+                li.textContent = item.title;
+                list.appendChild(li);
+            });
+
+            document.getElementById("message").textContent = "Data loaded successfully!";
+        }
+    </script>
+
+</body>
+</html>
+
